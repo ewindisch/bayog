@@ -16,3 +16,17 @@ Train a bad message:
 
 Train a good message:
  echo "message" | sa-log-learn ham
+
+installation
+============
+
+This requires spamassassin, although we're not actually
+processing emails. We use the spamassassin bayesian filter
+for log analysis.
+
+You will want to disable all of the email-related checks
+in your spamassassin installation. Eventually, this
+project should include reasonable spamassassin configuration
+settings.
+
+You must run 'spamd'.
