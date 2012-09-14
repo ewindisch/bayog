@@ -1,0 +1,7 @@
+#!/bin/bash
+cat /etc/bayog/log-header - | spamc -E >/dev/null 2>/dev/null
+if [ $? -gt 0 ]; then
+    # Do something smarter here...
+    echo "Caught message." >> /tmp/sa-log.log
+    echo $msg >> /tmp/sa-log.log
+fi

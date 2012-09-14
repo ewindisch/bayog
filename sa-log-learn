@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ -z $1 ]; then
+    echo "Must supply argument, 'spam' or 'ham'"
+fi
+cat /etc/bayog/log-header - | sa-learn --$1 -D
